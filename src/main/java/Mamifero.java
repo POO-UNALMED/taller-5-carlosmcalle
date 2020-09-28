@@ -2,6 +2,8 @@ package zooAnimales;
 
 import java.util.ArrayList;
 
+import gestion.Zona;
+
 public class Mamifero extends Animal {
     private ArrayList<Mamifero> listado = new ArrayList<>();
     public static int caballos;
@@ -30,29 +32,38 @@ public class Mamifero extends Animal {
     }
 
 
-    public Mamifero(String nombre, int edad, String genero, Boolean esCaballo) {
-        super(nombre, edad, genero);
-
-        if (esCaballo) {
-            this.pelaje = true;
-            this.patas = 4;
-            this.setHabitat("pradera");
-        } else {
-            this.pelaje = true;
-            this.patas = 4;
-            this.setHabitat("selva");
-        }
+    public Mamifero(String nombre, int edad, String habitat, String genero, Zona zona, boolean pelaje, int patas) {
+        super(nombre, edad, habitat, genero, zona);
+        this.pelaje = pelaje;
+        this.patas = patas;
         this.listado.add(this);
     }
 
-    public static Animal crearCaballo(String nombre, int edad, String genero) {
-        caballos++;
-        return new Mamifero(nombre, edad, genero, true);
+    public void crearCaballo(String nombre, int edad, String genero, Zona zona) {
+    	new Mamifero(nombre, edad, "pradera", genero, zona, true, 4);
+    	caballos++;
     }
 
-    public static Animal crearLeon(String nombre, int edad, String genero) {
-        leones++;
-        return new Mamifero(nombre, edad, genero, false);
+    public void crearLeon(String nombre, int edad, String genero, Zona zona) {
+        new Mamifero(nombre, edad, "selva", genero, zona, true, 4);
+    	leones++;
+    }
+    
+    public Mamifero(String nombre, int edad, String habitat, String genero, boolean pelaje, int patas) {
+        super(nombre, edad, habitat, genero);
+        this.pelaje = pelaje;
+        this.patas = patas;
+        this.listado.add(this);
+    }
+
+    public void crearCaballo(String nombre, int edad, String genero) {
+    	new Mamifero(nombre, edad, "pradera", genero, true, 4);
+    	caballos++;
+    }
+
+    public void crearLeon(String nombre, int edad, String genero) {
+        new Mamifero(nombre, edad, "selva", genero, true, 4);
+    	leones++;
     }
 
     public int cantidadMamiferos() {

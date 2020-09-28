@@ -27,34 +27,43 @@ public class Ave extends Animal {
         return "volar";
     }
 
-
-    public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
-        super(nombre, edad, genero);
-        this.colorPlumas = colorPlumas;
-        this.setHabitat(habitat);
+    public Ave(String nombre, int edad, String habitat, String genero, Zona zona, String colorPlumas) {
+    	super(nombre, edad, habitat, genero, zona);
+    	this.colorPlumas = colorPlumas;
+    	this.listado.add(this);
     }
+    
+      
 
-    public Ave(String nombre, int edad, String genero, Boolean esHalcon) {
-        super(nombre, edad, genero);
-        if (esHalcon) {
-            this.setHabitat("monta\u00f1a");
-            this.colorPlumas = "cafe glorioso";
-        } else {
-            this.setHabitat("monta\u00f1a");
-            this.colorPlumas = "blanco y amarillo";
-        }
-        this.listado.add(this);
-    }
-
-    public static Animal crearHalcon(String nombre, int edad, String genero) {
+    public void crearHalcon(String nombre, int edad, String genero, Zona zona) {
+        new Ave(nombre, edad, "monta\u00f1a", genero, zona, "cafe glorioso");
         halcones++;
-        return new Ave(nombre, edad, genero, true);
     }
 
-    public static Animal crearAguila(String nombre, int edad, String genero) {
-        aguilas++;
-        return new Ave(nombre, edad, genero, false);
+    public void crearAguila(String nombre, int edad, String genero, Zona zona) {
+        new Ave(nombre, edad, "monta\u00f1a", genero, zona, "blanco y amarillo");
+        halcones++;
     }
+    
+    public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
+    	super(nombre, edad, habitat, genero);
+    	this.colorPlumas = colorPlumas;
+    	this.listado.add(this);
+    }
+    
+      
+
+    public void crearHalcon(String nombre, int edad, String genero) {
+        new Ave(nombre, edad, "monta\u00f1a", genero, "cafe glorioso");
+        halcones++;
+    }
+
+    public void crearAguila(String nombre, int edad, String genero) {
+        new Ave(nombre, edad, "monta\u00f1a", genero, "blanco y amarillo");
+        halcones++;
+    }
+    
+ 
 
     public int cantidadAves() {
         return halcones + aguilas;

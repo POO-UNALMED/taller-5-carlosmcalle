@@ -2,6 +2,8 @@ package zooAnimales;
 
 import java.util.ArrayList;
 
+import gestion.Zona;
+
 public class Reptil extends Animal {
     private ArrayList<Reptil> listado = new ArrayList<>();
     public static int iguanas;
@@ -17,28 +19,39 @@ public class Reptil extends Animal {
 
     }
 
-    public Reptil(String nombre, int edad, String genero, Boolean esIguana) {
-        super(nombre, edad, genero);
-        if (esIguana) {
-            this.colorEscamas = "verde";
-            this.largoCola = 3;
-            this.setHabitat("humedal");
-        } else {
-            this.colorEscamas = "blanco";
-            this.largoCola = 1;
-            this.setHabitat("jungla");
-        }
+    public Reptil(String nombre, int edad, String habitat, String genero, Zona zona, String colorEscamas, int largoCola) {
+        super(nombre, edad, habitat, genero, zona);
+        this.colorEscamas = colorEscamas;
+        this.largoCola = largoCola;
         this.listado.add(this);
     }
-
-    public static Animal crearIguana(String nombre, int edad, String genero) {
-        iguanas++;
-        return new Reptil(nombre, edad, genero, true);
+    public void crearIguana(String nombre, int edad, String habitat, String genero, Zona zona) {
+    	new Pez(nombre, edad, "humedal", genero, zona, "verde", 3);
+    	iguanas++;
+       
     }
-
-    public static Animal crearSerpiente(String nombre, int edad, String genero) {
-        serpientes++;
-        return new Reptil(nombre, edad, genero, false);
+    
+    public void crearSerpiente(String nombre, int edad, String habitat, String genero, Zona zona) {
+    	new Pez(nombre, edad, "jungla", genero, zona, "blanco", 1);
+    	iguanas++;
+       
+    }
+    
+    public Reptil(String nombre, int edad, String habitat, String genero, String colorEscamas, int largoCola) {
+        super(nombre, edad, habitat, genero);
+        this.colorEscamas = colorEscamas;
+        this.largoCola = largoCola;
+        this.listado.add(this);
+    }
+    public void crearIguana(String nombre, int edad, String habitat, String genero) {
+    	new Pez(nombre, edad, "humedal", genero, "verde", 3);
+    	iguanas++;      
+    }
+    
+    public void crearSerpiente(String nombre, int edad, String habitat, String genero) {
+    	new Pez(nombre, edad, "jungla", genero, "blanco", 1);
+    	iguanas++;
+       
     }
 
     public int cantidadReptiles() {

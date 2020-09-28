@@ -15,6 +15,22 @@ public class Animal {
     public Animal() {
         totalAnimales++;
     }
+   
+    public Animal(int edad) {
+        this.edad = edad;
+        totalAnimales++;
+    }
+    
+    public Animal(String nombre) {
+        this.nombre = nombre;
+        totalAnimales++;
+    }
+    
+    public Animal(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+        totalAnimales++;
+    }
 
     public Animal(String nombre, int edad, String genero) {
         this.nombre = nombre;
