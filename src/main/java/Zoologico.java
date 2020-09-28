@@ -13,6 +13,11 @@ public class Zoologico {
 
     }
 
+    public Zoologico(String nombre, String ubicacion) {
+        this.nombre = nombre;
+        this.ubicacion = ubicacion;
+    }
+
     public Zoologico(String nombre, String ubicacion, Zona zonas) {
         this.nombre = nombre;
         this.ubicacion = ubicacion;
