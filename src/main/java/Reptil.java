@@ -9,8 +9,8 @@ public class Reptil extends Animal {
     private String colorEscamas;
     private int largoCola;
 
-    public void movimiento() {
-        System.out.println("reptar");
+    public String movimiento() {
+        return "reptar";
     }
 
     public Reptil() {

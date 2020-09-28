@@ -27,8 +27,8 @@ public class Anfibio extends Animal {
         this.listado.add(this);
     }
 
-    public void movimiento() {
-        System.out.println("saltar");
+    public String movimiento() {
+        return "saltar";
     }
 
     public static Animal crearRana(String nombre, int edad, String genero) {

@@ -1,5 +1,7 @@
 package zooAnimales;
 
+import gestion.Zona;
+
 import java.util.ArrayList;
 
 public class Ave extends Animal {
@@ -9,6 +11,10 @@ public class Ave extends Animal {
     private String colorPlumas;
 
 
+    public Ave() {
+
+    }
+    
     public String getColorPlumas() {
         return colorPlumas;
     }
@@ -17,22 +23,25 @@ public class Ave extends Animal {
         this.colorPlumas = colorPlumas;
     }
 
-    public void movimiento() {
-        System.out.println("volar");
+    public String movimiento() {
+        return "volar";
     }
 
-    public Ave() {
 
+    public Ave(String nombre, int edad, String habitat, String genero, String colorPlumas) {
+        super(nombre, edad, genero);
+        this.colorPlumas = colorPlumas;
+        this.setHabitat(habitat);
     }
 
     public Ave(String nombre, int edad, String genero, Boolean esHalcon) {
         super(nombre, edad, genero);
         if (esHalcon) {
+            this.setHabitat("monta\u00f1a");
             this.colorPlumas = "cafe glorioso";
-            this.setHabitat("monta\u00f1a");
         } else {
-            this.colorPlumas = "blanco y amarillo";
             this.setHabitat("monta\u00f1a");
+            this.colorPlumas = "blanco y amarillo";
         }
         this.listado.add(this);
     }

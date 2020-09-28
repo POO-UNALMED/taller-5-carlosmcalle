@@ -27,8 +27,7 @@ public class Pez extends Animal {
         this.listado.add(this);
     }
 
-    public void movimiento() {
-        System.out.println("nadar");
+    public String movimiento(){ return "nadar";
     }
 
     public static Animal crearSalmon(String nombre, int edad, String genero) {

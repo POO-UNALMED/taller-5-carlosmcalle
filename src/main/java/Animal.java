@@ -93,8 +93,8 @@ public class Animal {
         this.zona = zona;
     }
 
-    public void movimiento() {
-        System.out.println("desplazarse");
+    public String  movimiento() {
+        return "desplazarse";
     }
 
 
