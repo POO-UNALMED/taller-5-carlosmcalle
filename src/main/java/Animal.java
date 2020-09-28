@@ -35,8 +35,8 @@ public class Animal {
 
 
     public void totalPorTipo(){
-        System.out.println("Mamiferos: " + Mamifero.totalAnimales);
-        System.out.println("Aves: " + Ave.totalAnimales);
+        System.out.println("Mamiferos: " + (Mamifero.leones+Mamifero.caballos));
+        System.out.println("Aves: " + (Ave.aguilas+Ave.halcones));
         System.out.println("Reptiles: " + Reptil.totalAnimales);
         System.out.println("Peces: " + Pez.totalAnimales);
         System.out.println("Anfibios: " + Anfibio.totalAnimales);
