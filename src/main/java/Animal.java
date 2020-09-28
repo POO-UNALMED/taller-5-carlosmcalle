@@ -129,6 +129,7 @@ class Mamifero extends Animal {
 
     }
 
+
     public Mamifero(String nombre, int edad, String genero, Boolean esCaballo) {
         super(nombre, edad, genero);
 
@@ -165,7 +166,7 @@ class Ave extends Animal {
     public static int aguilas;
     private String colorPlumas;
 
-    
+
 
     public String getColorPlumas() {
         return colorPlumas;
@@ -190,6 +191,7 @@ class Ave extends Animal {
             this.colorPlumas = "blanco y amarillo";
             this.setHabitat("montana");
         }
+        this.listado.add(this);
     }
 
     public static Animal crearHalcon(String nombre, int edad, String genero) {
@@ -234,6 +236,7 @@ class Reptil extends Animal {
             this.largoCola = 1;
             this.setHabitat("jungla");
         }
+        this.listado.add(this);
     }
 
     public static Animal crearIguana(String nombre, int edad, String genero) {
@@ -273,6 +276,7 @@ class Pez extends Animal {
             this.cantidadAletas = 6;
             this.setHabitat("oceano");
         }
+        this.listado.add(this);
     }
 
     public void movimiento() {
@@ -316,6 +320,7 @@ class Anfibio extends Animal {
             this.venenoso = false;
             this.setHabitat("selva");
         }
+        this.listado.add(this);
     }
 
     public void movimiento() {
