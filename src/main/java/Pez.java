@@ -26,12 +26,12 @@ public class Pez extends Animal {
     }
 
 
-    public void crearSalmon(String nombre, int edad, String habitat, String genero, Zona zona) {
+    public static void crearSalmon(String nombre, int edad, String habitat, String genero, Zona zona) {
         new Pez(nombre, edad, "oceano", genero, zona, "rojo", 6);
     	salmones++;
     }
 
-    public void crearBacalao(String nombre, int edad, String habitat, String genero, Zona zona) {
+    public static void crearBacalao(String nombre, int edad, String habitat, String genero, Zona zona) {
         new Pez(nombre, edad, "oceano", genero, zona, "gris", 6);
     	salmones++;
     }
@@ -44,12 +44,12 @@ public class Pez extends Animal {
     }
 
 
-    public void crearSalmon(String nombre, int edad, String habitat, String genero) {
+    public static void crearSalmon(String nombre, int edad, String habitat, String genero) {
         new Pez(nombre, edad, "oceano", genero, "rojo", 6);
     	salmones++;
     }
 
-    public void crearBacalao(String nombre, int edad, String habitat, String genero) {
+    public static void crearBacalao(String nombre, int edad, String habitat, String genero) {
         new Pez(nombre, edad, "oceano", genero, "gris", 6);
     	salmones++;
     }

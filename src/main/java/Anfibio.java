@@ -27,13 +27,13 @@ public class Anfibio extends Animal {
        }
 
 
-    public void crearRana(String nombre, int edad, String habitat, String genero, Zona zona) {
+    public static void crearRana(String nombre, int edad, String habitat, String genero, Zona zona) {
     	new Anfibio(nombre, edad, "selva", genero, zona, "rojo", true);
     	ranas++;
        
     }
     
-    public void crearSalamandra(String nombre, int edad, String habitat, String genero, Zona zona) {
+    public static void crearSalamandra(String nombre, int edad, String habitat, String genero, Zona zona) {
     	new Anfibio(nombre, edad, "selva", genero, zona, "negro y amarillo", false);
     	salamandras++;
        
@@ -47,13 +47,13 @@ public class Anfibio extends Animal {
        }
 
 
-    public void crearRana(String nombre, int edad, String habitat, String genero) {
+    public static void crearRana(String nombre, int edad, String habitat, String genero) {
     	new Anfibio(nombre, edad, "selva", genero, "rojo", true);
     	ranas++;
        
     }
     
-    public void crearSalamandra(String nombre, int edad, String habitat, String genero) {
+    public static void crearSalamandra(String nombre, int edad, String habitat, String genero) {
     	new Anfibio(nombre, edad, "selva", genero, "negro y amarillo", false);
     	salamandras++;
        
