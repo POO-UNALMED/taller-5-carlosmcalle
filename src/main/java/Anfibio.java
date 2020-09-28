@@ -10,6 +10,24 @@ public class Anfibio extends Animal {
     public static int salamandras;
     private String colorPiel;
     private boolean venenoso;
+    
+
+    public String getColorPiel() {
+        return colorPiel;
+    }
+
+    public void setColorPiel(String colorPiel) {
+        this.colorPiel = colorPiel;
+    }
+
+    public boolean isVenenoso() {
+        return venenoso;
+    }
+
+    public void setVenenoso(boolean venenoso) {
+        this.venenoso = venenoso;
+    }
+    
 
     public String movimiento() {
         return "saltar";

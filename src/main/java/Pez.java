@@ -10,7 +10,23 @@ public class Pez extends Animal {
     public static int bacalaos;
     private String colorEscamas;
     private int cantidadAletas;
-    
+
+    public String getColorEscamas() {
+        return colorEscamas;
+    }
+
+    public void setColorEscamas(String colorEscamas) {
+        this.colorEscamas = colorEscamas;
+    }
+
+    public int getCantidadAletas() {
+        return cantidadAletas;
+    }
+
+    public void setCantidadAletas(int cantidadAletas) {
+        this.cantidadAletas = cantidadAletas;
+    }
+
     public String movimiento(){ return "nadar";
     }
 
